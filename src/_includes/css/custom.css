@@ -6,5 +6,103 @@
 
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background: url('/img/bg.svg');
+
+}
+
+
+.form-wrapper {
+  padding: 20px;
+  background: #ffffff2b;
+  border-radius: 10px;
+  backdrop-filter: blur(0px);
+  box-shadow: 0 0 40px -12px #000000;
+}
+
+.form-wrapper form :where(label,input,textarea) {
+  width: 100%;
+  display: block;
+}
+.form-wrapper form :where(input[type="text"],input[type="email"],textarea) {
+  width: 100%;
+  display: block;
+  padding: 10px 10px;
+  outline: none;
+  border-radius: 4px;
+  resize: none;
+  margin-top: 9px;
+}
+.form-wrapper form label {
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.form-wrapper form button {
+  max-width: 120px;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(23,164,193,1) 100%);
+  width: 100%;
+  display: inline-block;
+  border-radius: 4px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  min-height: 37px;
+  transition: .3s all ease;
+}
+.form-wrapper form button:hover {
+  background: linear-gradient(263deg, rgba(2,0,36,1) 0%, rgba(23,164,193,1) 100%);
+}
+.form-wrapper form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+.noise {
+  position: fixed;
+  z-index: 9999;
+  top: -300%;
+  left: -150%;
+  height: 600%;
+  width: 600%;
+  -webkit-animation: grain 7s steps(10) infinite;
+  animation: grain 7s steps(10) infinite;
+  background-image: url(/img/noise.png);
+  background-size: 200px;
+  background-repeat: repeat;
+  opacity: .25;
+  pointer-events: none;
+}
+
+@keyframes grain {
+  0%, 100% {
+  transform: translate(0);
+}
+10% {
+  transform: translate(-5%,-10%);
+}
+20% {
+  transform: translate(-15%,5%);
+}
+30% {
+  transform: translate(7%,-25%);
+}
+40% {
+  transform: translate(-5%,25%);
+}
+50% {
+  transform: translate(-15%,10%);
+}
+60% {
+  transform: translate(15%);
+}
+70% {
+  transform: translateY(15%);
+}
+80% {
+  transform: translate(3%,35%);
+}
+90% {
+  transform: translate(-10%,10%);
+}
 }
