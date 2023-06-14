@@ -29,6 +29,7 @@ html {
   outline: none;
   border-radius: 4px;
   resize: none;
+  border: 1px solid;
   margin-top: 9px;
 }
 .form-wrapper form label {
